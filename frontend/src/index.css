@@ -1,0 +1,105 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* BASIC */
+
+@layer base {
+    *{
+        @apply m-0 p-0 box-border
+    }
+
+    html{
+        @apply scroll-smooth
+    }
+
+    body,button,input,textarea{
+        @apply font-roboto text-base
+    }
+
+    body{
+        @apply text-text bg-backround
+    }
+
+    ul{
+        @apply list-none
+    }
+
+    h1,h2,h3 {
+        @apply text-text-title font-semibold
+    }
+
+    a{
+        text-decoration: none;
+    }
+
+    button{
+        @apply cursor-pointer border-none outline-none
+    }
+
+    img {
+        @apply max-w-full h-auto
+      }
+}
+
+/* REUSABLE */
+
+@layer components {
+    .section {
+      @apply pt-24 px-0 pb-8; /* 你可以在这里添加你想要的样式 */
+    }
+
+    .section_title {
+        @apply text-h1 text-text-title text-center
+    }
+
+    .section_subttle{
+        @apply block text-sm mb-16 text-center
+    }
+
+    .container{
+        @apply max-w-[968px] mx-auto
+    }
+
+    .button{
+        @apply inline-block bg-btn-primary text-btn-text py-5 px-8 rounded-2xl font-medium
+    }
+
+    .button:hover{
+        @apply bg-btn-hover text-btn-thover
+    }
+
+  }
+
+  /* BREAK POINT */
+  @media screen and (max-width:992px) {
+    .container {
+        @apply px-6
+    }
+  }
+
+/* For medium devices */
+@media screen and (max-width: 768px) {
+    body {
+        @apply m-0 mb-16
+    }
+  
+    .section {
+        @apply pt-8 pb-16 px-0
+    }
+  
+    .section_subtitle {
+        @apply mb-12
+    }
+  }
+  
+  @media screen and (max-width: 576px) {
+  }
+  
+  /* For small devices */
+  @media screen and (max-width: 350px) {
+  
+    .container {
+        @apply px-3
+    }
+  }
